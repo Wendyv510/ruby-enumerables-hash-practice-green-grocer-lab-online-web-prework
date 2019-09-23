@@ -80,3 +80,15 @@ def consolidate_cart
       .map(apply_coupons)
     end
     
+    def apply_clearance
+      { 
+        "PEANUTBUTTER" => {:price =>3.00, :clearance => true, :count =>2}
+        "KALE" => {:price =>3.00, :clearance => false, :count=> 3}
+        "SOYMILK" => {:price => 4.50, :clearance => true, :count =>1}
+      }
+      
+      do
+        .map(apply_clearance {:clearance => true |n| n - %20})
+      end
+      
+        
