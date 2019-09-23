@@ -68,3 +68,15 @@ def consolidate_cart
       .map(consolidate_cart){"AVOCADO""KALE"=(:count)}
     end
     
+    def apply_coupons("consolidate_cart", "coupon")
+      coupon=[{:item=>"AVOCADO", :num =>2, :cost =>5.00}]
+      
+      {
+        "AVOCADO" => {:price => 3.00, :clearance => true, :count =>3},
+        "KALE" => {:price => 3.00, :clearance => false, :count => 1}
+      }
+      
+    do
+      .map(apply_coupons)
+    end
+    
