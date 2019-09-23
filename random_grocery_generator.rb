@@ -55,3 +55,16 @@ coupons.each do |coupon|
 end
 
 puts "Your total is #{checkout(cart: cart, coupons: coupons)}"
+
+def consolidate_cart
+  
+  [
+    {"AVOCADO" =>{:price =>3.00,:clearance =>true}}
+    {"AVOCADO"=> {:price =>3.00, :clearance =>true}}
+    {"KALE" => {:price =>3.00, :clearance => true}}
+    ]
+    
+    do
+      .map(consolidate_cart){"AVOCADO""KALE"=(:count)}
+    end
+    
