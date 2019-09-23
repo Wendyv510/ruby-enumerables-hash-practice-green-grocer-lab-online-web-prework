@@ -91,4 +91,14 @@ def consolidate_cart
         .map(apply_clearance {:clearance => true |n| n - %20})
       end
       
+      
+      def checkout (consolidate_cart, apply_coupons, apply_clearance)
+      puts "Your total is #{consolidate_cart{apply_coupons + apply_clearance}}""
+      
+      if 
+        ("checkout) is > 100
+      then
+          {total 
+      
+      
         
